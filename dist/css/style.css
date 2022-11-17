@@ -7435,6 +7435,10 @@ section .section-title.no-decoration:after {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
 }
 
 .intro .agency-intro .agency-items h1,
@@ -7450,9 +7454,25 @@ section .section-title.no-decoration:after {
 .intro .agency-intro .agency-items h2,
 .intro .agency-intro .agency-items .h2 {
   color: rgba(255, 255, 255, 0.6);
-  margin-bottom: 50px;
-  font-size: 24px;
+  margin-bottom: 30px;
+  font-size: 18px;
   font-family: "Jost", sans-serif;
+}
+
+.intro .agency-intro .agency-items span {
+  padding: 10px 0;
+  position: relative;
+  display: inline-block;
+}
+
+.intro .agency-intro .agency-items span::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  width: 100%;
+  height: 5px;
+  background-color: #fff;
+  bottom: -5px;
 }
 
 .intro .agency-intro .agency-items .demo {
@@ -7465,14 +7485,13 @@ section .section-title.no-decoration:after {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  width: 30%;
+  width: 40%;
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
 .intro .agency-intro .agency-items .demo i {
-  margin: 0.5em;
   font-size: 1em;
   border-radius: 50%;
   padding: 0.5em;
@@ -11743,7 +11762,7 @@ section .section-title.no-decoration:after {
   }
 
   .top.bar .nav-bar .links .main-ul {
-    min-width: 440px;
+    min-width: 250px;
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
@@ -11761,12 +11780,27 @@ section .section-title.no-decoration:after {
 
   .intro .agency-intro .agency-items {
     width: 50%;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    text-align: start;
   }
 
   .intro .agency-intro .agency-items h1,
   .intro .agency-intro .agency-items .h1 {
     font-size: 48px;
     line-height: 56px;
+  }
+
+  .intro .agency-intro .agency-items h2,
+  .intro .agency-intro .agency-items .h2 {
+    font-size: 24px;
+    line-height: 24px;
+    margin-bottom: 50px;
+  }
+
+  .intro .agency-intro .agency-items .demo {
+    width: 20%;
   }
 }
 
