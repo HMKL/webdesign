@@ -1,0 +1,8 @@
+.wrap {
+  width: calc(100% - 30px);
+  margin: 0 auto;
+
+  @media (min-width: $lg) {
+    max-width: 1320px;
+  }
+}

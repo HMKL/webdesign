@@ -1,0 +1,38 @@
+.tags {
+  margin: 0;
+  padding: 25px 0;
+  li {
+    list-style: none;
+    display: inline-block;
+    a {
+      text-decoration: none;
+      &:hover,&:focus,&:active {
+        text-decoration: none;
+      }
+    }
+    &:after {
+      content: ',';
+    }
+    &:last-of-type {
+      &:after {
+        content: none;
+      }
+    }
+  }
+}
+@media (min-width: $sm) {
+  .tags {
+  }
+}
+@media (min-width: $md) {
+  .tags {
+  }
+}
+@media (min-width: $lg) {
+  .tags {
+  }
+}
+@media (min-width: $xl) {
+  .tags {
+  }
+}
