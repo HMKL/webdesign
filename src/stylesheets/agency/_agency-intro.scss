@@ -1,9 +1,35 @@
-@import "wrap";
 @import url("https://fonts.googleapis.com/css2?family=Jost&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
 .intro {
-  padding: 30px 0;
+  padding: 70px 0 0 0;
   background-color: #37517e;
+  background: linear-gradient(
+      to right,
+      rgba(39, 70, 133, 0.8) 0%,
+      rgba(61, 179, 197, 0.8) 100%
+    ),
+    url(../images/hero-bg.jpg);
+  position: relative;
+  overflow: hidden;
+  &::after {
+    content: "";
+    display: block;
+    padding: 0 0 50px 0;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 26%;
+    bottom: 0px;
+    transform: translateX(-1%) translateY(119px) rotate(5deg);
+    background: linear-gradient(
+      to right,
+      rgba(39, 70, 133, 0) 0%,
+      rgba(61, 179, 197, 0.8) 60%
+    );
+  }
   .agency-intro {
     display: flex;
     flex-direction: column-reverse;
@@ -24,13 +50,20 @@
         align-items: flex-start;
         text-align: start;
       }
+      img {
+        max-width: 50%;
+        @media (min-width: $lg) {
+          max-width: 100%;
+        }
+      }
       h1 {
         margin: 0 0 10px 0;
         font-size: 28px;
         font-weight: 700;
         line-height: 36px;
         color: #fff;
-        font-family: "Jost", sans-serif;
+        font-family: "Poppins", sans-serif;
+
         @media (min-width: $lg) {
           font-size: 48px;
           line-height: 56px;
@@ -85,6 +118,9 @@
             background-color: #fff;
             color: #37517e;
             transition: all 0.4s ease-in-out;
+          }
+          @media (min-width: $lg) {
+            font-size: 1.5em;
           }
         }
       }

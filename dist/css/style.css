@@ -11,6 +11,8 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Jost&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -7086,10 +7088,6 @@ fieldset:disabled .btn {
   visibility: hidden !important;
 }
 
-body {
-  font-size: 18px;
-}
-
 .browserupgrade {
   display: table;
   position: fixed;
@@ -7275,7 +7273,12 @@ section .section-title.no-decoration:after {
 }
 
 .top.bar {
-  background-color: #37517e;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .top.bar .nav-bar {
@@ -7329,7 +7332,7 @@ section .section-title.no-decoration:after {
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  background-color: #37517e;
+  background-color: rgba(255, 255, 255, 0.2);
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
@@ -7402,14 +7405,29 @@ section .section-title.no-decoration:after {
   top: 50%;
 }
 
-.wrap {
-  width: calc(100% - 30px);
-  margin: 0 auto;
+.intro {
+  padding: 70px 0 0 0;
+  background-color: #37517e;
+  background: linear-gradient(to right, rgba(39, 70, 133, 0.8) 0%, rgba(61, 179, 197, 0.8) 100%), url(../images/hero-bg.jpg);
+  position: relative;
+  overflow: hidden;
 }
 
-.intro {
-  padding: 30px 0;
-  background-color: #37517e;
+.intro::after {
+  content: "";
+  display: block;
+  padding: 0 0 50px 0;
+}
+
+.intro::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 26%;
+  bottom: 0px;
+  -webkit-transform: translateX(-1%) translateY(119px) rotate(5deg);
+  transform: translateX(-1%) translateY(119px) rotate(5deg);
+  background: linear-gradient(to right, rgba(39, 70, 133, 0) 0%, rgba(61, 179, 197, 0.8) 60%);
 }
 
 .intro .agency-intro {
@@ -7441,6 +7459,10 @@ section .section-title.no-decoration:after {
   text-align: center;
 }
 
+.intro .agency-intro .agency-items img {
+  max-width: 50%;
+}
+
 .intro .agency-intro .agency-items h1,
 .intro .agency-intro .agency-items .h1 {
   margin: 0 0 10px 0;
@@ -7448,7 +7470,7 @@ section .section-title.no-decoration:after {
   font-weight: 700;
   line-height: 36px;
   color: #fff;
-  font-family: "Jost", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .intro .agency-intro .agency-items h2,
@@ -7534,6 +7556,52 @@ section .section-title.no-decoration:after {
     -webkit-transform: translateY(-10px);
     transform: translateY(-10px);
   }
+}
+
+.about {
+  background: linear-gradient(to right, rgba(39, 70, 133, 0) 8%, rgba(61, 179, 197, 0.8) 80%);
+  overflow: hidden;
+}
+
+.about .wrap .inner {
+  padding: 30px 0 0 0;
+}
+
+.about .wrap .inner .about-items {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.about .wrap .inner .about-items .items.first {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.about .wrap .inner .about-items .items.first .items-inner {
+  width: calc(50% - 10px);
+  height: calc(50% - 20px);
+  border: 1px solid red;
+}
+
+.about .wrap .inner .about-items .items {
+  width: calc(50% - 10px);
 }
 
 @media (min-width: 576px) {
@@ -11754,6 +11822,10 @@ section .section-title.no-decoration:after {
     max-width: 1320px;
   }
 
+  .top.bar {
+    background-color: transparent;
+  }
+
   .top.bar .nav-bar .links {
     position: relative;
     top: 0;
@@ -11766,10 +11838,7 @@ section .section-title.no-decoration:after {
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
-  }
-
-  .wrap {
-    max-width: 1320px;
+    background-color: transparent;
   }
 
   .intro .agency-intro {
@@ -11784,6 +11853,10 @@ section .section-title.no-decoration:after {
     -ms-flex-align: start;
     align-items: flex-start;
     text-align: start;
+  }
+
+  .intro .agency-intro .agency-items img {
+    max-width: 100%;
   }
 
   .intro .agency-intro .agency-items h1,
@@ -11801,6 +11874,10 @@ section .section-title.no-decoration:after {
 
   .intro .agency-intro .agency-items .demo {
     width: 20%;
+  }
+
+  .intro .agency-intro .agency-items .demo i {
+    font-size: 1.5em;
   }
 }
 

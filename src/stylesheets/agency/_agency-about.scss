@@ -1,0 +1,32 @@
+.about {
+  background: linear-gradient(
+    to right,
+    rgba(39, 70, 133, 0) 8%,
+    rgba(61, 179, 197, 0.8) 80%
+  );
+  overflow: hidden;
+  .wrap {
+    .inner {
+      padding: 30px 0 0 0;
+      .about-items {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .items.first {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          .items-inner {
+            width: calc(50% - 10px);
+            height: calc(50% - 20px);
+            border: 1px solid red;
+          }
+        }
+        .items {
+          width: calc(50% - 10px);
+        }
+      }
+    }
+  }
+}
