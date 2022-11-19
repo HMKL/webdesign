@@ -42,4 +42,16 @@ let layoutHandler;
   });
 })();
 
-
+const getNav = document.querySelector('.top.bar');
+let prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+let currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    getNav.style.top = "0";
+   
+  } else {
+    getNav.style.top = "-64px";
+  
+  }
+  prevScrollpos = currentScrollPos;
+}

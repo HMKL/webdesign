@@ -7273,12 +7273,12 @@ section .section-title.no-decoration:after {
 }
 
 .top.bar {
-  position: absolute;
-  top: 0;
+  position: fixed;
   right: 0;
   left: 0;
   z-index: 1;
-  background-color: rgba(255, 255, 255, 0.2);
+  transition: all 0.4s ease-in-out;
+  background: rgba(39, 70, 133, 0.8);
 }
 
 .top.bar .nav-bar {
@@ -7332,7 +7332,7 @@ section .section-title.no-decoration:after {
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  background-color: rgba(255, 255, 255, 0.2);
+  background: rgba(39, 70, 133, 0.8);
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
@@ -7559,15 +7559,57 @@ section .section-title.no-decoration:after {
 }
 
 .about {
-  background: linear-gradient(to right, rgba(39, 70, 133, 0) 8%, rgba(61, 179, 197, 0.8) 80%);
+  background: linear-gradient(to right, rgb(39, 70, 133) 0%, rgb(61, 179, 197) 100%);
+  position: relative;
+  color: #fff;
   overflow: hidden;
 }
 
-.about .wrap .inner {
-  padding: 30px 0 0 0;
+.about .particle {
+  position: absolute;
+  border-radius: 50%;
 }
 
-.about .wrap .inner .about-items {
+.about .wrap .inner {
+  padding: 120px 0;
+  position: relative;
+}
+
+.about .wrap .inner .features {
+  width: 100%;
+  margin: 0 auto 80px;
+  text-align: center;
+}
+
+.about .wrap .inner .features:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(to right, rgba(39, 70, 133, 0) 46%, rgba(61, 179, 197, 0.8) 70%);
+  width: 50%;
+}
+
+.about .wrap .inner .features p {
+  font-weight: 300;
+  font-size: 17px;
+  text-transform: uppercase;
+  letter-spacing: 7px;
+  margin-bottom: 10px;
+  font-family: "Poppins", sans-serif;
+}
+
+.about .wrap .inner .features h3,
+.about .wrap .inner .features .h3 {
+  font-size: 28px;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.about .wrap .inner .items {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -7577,31 +7619,42 @@ section .section-title.no-decoration:after {
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-}
-
-.about .wrap .inner .about-items .items.first {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
 }
 
-.about .wrap .inner .about-items .items.first .items-inner {
+.about .wrap .inner .items .item-box {
   width: calc(50% - 10px);
-  height: calc(50% - 20px);
+  padding: 0 0 20px 0;
+}
+
+.about .wrap .inner .items .item-box .item-content {
+  padding: 60px 40px;
   border: 1px solid red;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
-.about .wrap .inner .about-items .items {
-  width: calc(50% - 10px);
+.about .wrap .inner .items .item-box .item-content i {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+
+.about .wrap .inner .items .item-box .item-content .cont h2,
+.about .wrap .inner .items .item-box .item-content .cont .h2 {
+  line-height: 1.8;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+  font-family: "Poppins", sans-serif;
 }
 
 @media (min-width: 576px) {
@@ -10336,6 +10389,10 @@ section .section-title.no-decoration:after {
   .cta-section {
     padding: 70px 0;
   }
+
+  .about .wrap .inner .features {
+    width: 60%;
+  }
 }
 
 @media only screen and (min-width: 768px) {
@@ -11822,10 +11879,6 @@ section .section-title.no-decoration:after {
     max-width: 1320px;
   }
 
-  .top.bar {
-    background-color: transparent;
-  }
-
   .top.bar .nav-bar .links {
     position: relative;
     top: 0;
@@ -11862,7 +11915,7 @@ section .section-title.no-decoration:after {
   .intro .agency-intro .agency-items h1,
   .intro .agency-intro .agency-items .h1 {
     font-size: 48px;
-    line-height: 56px;
+    line-height: 1.4;
   }
 
   .intro .agency-intro .agency-items h2,
@@ -11878,6 +11931,11 @@ section .section-title.no-decoration:after {
 
   .intro .agency-intro .agency-items .demo i {
     font-size: 1.5em;
+  }
+
+  .about .wrap .inner .features h3,
+  .about .wrap .inner .features .h3 {
+    font-size: 48px;
   }
 }
 

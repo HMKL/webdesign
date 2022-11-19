@@ -1,15 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 @import "wrap";
+
 .top.bar {
   // background-color: #37517e;
-  position: absolute;
-  top: 0;
+  position: fixed;
+  // top: 0;
   right: 0;
   left: 0;
   z-index: 1;
-  background-color: rgba(255, 255, 255, 0.2);
+  transition: all 0.4s ease-in-out;
+  // background-color: rgba(255, 255, 255, 0.2);
+  background: rgba(39, 70, 133, 0.8);
   @media (min-width: $lg) {
-    background-color: transparent;
+    // background-color: transparent;
+    // background: rgba(39, 70, 133, 0.8);
   }
 
   .nav-bar {
@@ -53,8 +57,10 @@
         padding: 0;
         justify-content: space-between;
         // background-color: #37517e;
-        background-color: rgba(255, 255, 255, 0.2);
+        // background-color: rgba(255, 255, 255, 0.2);
+        background: rgba(39, 70, 133, 0.8);
         align-items: center;
+
         @media (min-width: $lg) {
           min-width: 250px;
           flex-direction: row;
