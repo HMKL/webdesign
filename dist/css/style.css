@@ -7278,7 +7278,6 @@ section .section-title.no-decoration:after {
   left: 0;
   z-index: 1;
   transition: all 0.4s ease-in-out;
-  background: rgba(39, 70, 133, 0.8);
 }
 
 .top.bar .nav-bar {
@@ -7403,6 +7402,22 @@ section .section-title.no-decoration:after {
   -webkit-transform: translate(-50%, -50%) rotate(-225deg);
   transform: translate(-50%, -50%) rotate(-225deg);
   top: 50%;
+}
+
+.slideUp {
+  -webkit-transform: translateY(-100px);
+  transform: translateY(-100px);
+  transition: -webkit-transform 0.5s ease-out;
+  transition: transform 0.5s ease-out;
+  transition: transform 0.5s ease-out, -webkit-transform 0.5s ease-out;
+}
+
+.slideDown {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  transition: -webkit-transform 0.5s ease-out;
+  transition: transform 0.5s ease-out;
+  transition: transform 0.5s ease-out, -webkit-transform 0.5s ease-out;
 }
 
 .intro {
