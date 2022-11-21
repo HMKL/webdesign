@@ -16,22 +16,17 @@
 
 
 
-  var new_scroll_position = 0;
-  var last_scroll_position;
-  var header = document.querySelector('.top.bar');
-  
+  let new_scroll_position = 0;
+  let last_scroll_position;
+  const header = document.querySelector('.top.bar');
   window.addEventListener('scroll', function(e) {
     last_scroll_position = window.scrollY;
-  
-    // Scrolling down
+    
     if (new_scroll_position < last_scroll_position && last_scroll_position > 80) {
-      // header.removeClass('slideDown').addClass('slideUp');
       header.classList.remove("slideDown");
       header.classList.add("slideUp");
   
-    // Scrolling up
     } else if (new_scroll_position > last_scroll_position) {
-      // header.removeClass('slideUp').addClass('slideDown');
       header.classList.remove("slideUp");
       header.classList.add("slideDown");
     }
@@ -39,23 +34,29 @@
     new_scroll_position = last_scroll_position;
   });
 
-
-
-console.log(header);
-
-
 })();
 
-// const getNav = document.querySelector('.top.bar');
-// let prevScrollpos = window.pageYOffset;
-// window.onscroll = function() {
-// let currentScrollPos = window.pageYOffset;
-//   if (prevScrollpos > currentScrollPos) {
-//     getNav.style.top = "0px";
-   
-//   } else {
-//     getNav.style.top = "-64px";
-  
-//   }
-//   prevScrollpos = currentScrollPos;
-// }
+
+
+// START
+
+
+
+
+
+function value() {
+  const navbar = document.querySelector('.top.bar');
+  var scroll = window.scrollY;
+  if (scroll < 200) {
+      navbar.classList.remove('color');
+  } else {
+      navbar.classList.add('color');
+  }
+}
+
+window.addEventListener('scroll', value);
+
+
+
+//END
+

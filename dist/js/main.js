@@ -48,11 +48,10 @@ let layoutHandler;
 
   let new_scroll_position = 0;
   let last_scroll_position;
-  let header = document.querySelector('.top.bar');
-  
+  const header = document.querySelector('.top.bar');
   window.addEventListener('scroll', function(e) {
     last_scroll_position = window.scrollY;
-  
+    
     if (new_scroll_position < last_scroll_position && last_scroll_position > 80) {
       header.classList.remove("slideDown");
       header.classList.add("slideUp");
@@ -67,16 +66,27 @@ let layoutHandler;
 
 })();
 
-// const getNav = document.querySelector('.top.bar');
-// let prevScrollpos = window.pageYOffset;
-// window.onscroll = function() {
-// let currentScrollPos = window.pageYOffset;
-//   if (prevScrollpos > currentScrollPos) {
-//     getNav.style.top = "0px";
-   
-//   } else {
-//     getNav.style.top = "-64px";
-  
-//   }
-//   prevScrollpos = currentScrollPos;
-// }
+
+
+// START
+
+
+
+
+
+function value() {
+  const navbar = document.querySelector('.top.bar');
+  var scroll = window.scrollY;
+  if (scroll < 200) {
+      navbar.classList.remove('color');
+  } else {
+      navbar.classList.add('color');
+  }
+}
+
+window.addEventListener('scroll', value);
+
+
+
+//END
+
