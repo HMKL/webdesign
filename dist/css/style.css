@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 /*!
- * Bootstrap  v5.2.2 (https://getbootstrap.com/)
+ * Bootstrap  v5.2.3 (https://getbootstrap.com/)
  * Copyright 2011-2022 The Bootstrap Authors
  * Copyright 2011-2022 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
@@ -4896,8 +4896,6 @@ fieldset:disabled .btn {
   display: block;
 }
 
-/* rtl:begin:ignore */
-
 .carousel-item-next:not(.carousel-item-start),
 .active.carousel-item-end {
   -webkit-transform: translateX(100%);
@@ -4909,8 +4907,6 @@ fieldset:disabled .btn {
   -webkit-transform: translateX(-100%);
   transform: translateX(-100%);
 }
-
-/* rtl:end:ignore */
 
 .carousel-fade .carousel-item {
   opacity: 0;

@@ -30,13 +30,21 @@
     "sass-mediaqueries": "^1.6.1",
     "sass-loader": "13.2.0"
   },
-  "name": "aaa",
+  "name": "webdesign",
   "version": "1.0.0",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HMKL/webdesign.git"
+  },
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HMKL/webdesign/issues"
+  },
+  "homepage": "https://github.com/HMKL/webdesign#readme",
   "description": ""
 }
