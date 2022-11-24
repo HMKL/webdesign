@@ -56,16 +56,16 @@
         flex-direction: column;
         margin: 0;
         padding: 0;
-        justify-content: space-between;
-        // background-color: #37517e;
-        // background-color: rgba(255, 255, 255, 0.2);
-        background: rgba(39, 70, 133, 0.8);
+        background: rgba(47, 39, 85, 1);
         align-items: center;
+        height: 100vh;
 
         @media (min-width: $lg) {
           min-width: 250px;
           flex-direction: row;
+          justify-content: space-between;
           background-color: transparent;
+          height: auto;
         }
         li {
           padding: 10px 0;
@@ -141,5 +141,16 @@
   transition: all 0.4s ease-in-out;
 }
 .color {
-  background: rgba(39, 70, 133, 0.8);
+  background: rgba(47, 39, 85, 0.8);
+}
+
+.over {
+  overflow: hidden;
+}
+
+.fixed {
+  position: fixed;
+}
+.absolute {
+  position: absolute;
 }
