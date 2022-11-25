@@ -7323,7 +7323,7 @@ section .section-title.no-decoration:after {
   flex-direction: column;
   margin: 0;
   padding: 0;
-  background: rgb(47, 39, 85);
+  background: rgb(31, 31, 36);
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
@@ -7410,7 +7410,7 @@ section .section-title.no-decoration:after {
 }
 
 .color {
-  background: rgba(47, 39, 85, 0.8);
+  background: rgb(31, 31, 36);
 }
 
 .over {
@@ -7434,15 +7434,6 @@ section .section-title.no-decoration:after {
   background-position: center;
   position: relative;
   overflow: hidden;
-}
-
-.intro::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  bottom: 0px;
-  background: linear-gradient(to left, rgba(39, 70, 133, 0.4) 0%, rgba(47, 39, 85, 0.4) 100%);
 }
 
 .intro .agency-intro {
@@ -7651,15 +7642,6 @@ section .section-title.no-decoration:after {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;
-}
-
-.about:before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  bottom: 0px;
-  background: linear-gradient(to left, rgba(39, 70, 133, 0.4) 0%, rgba(47, 39, 85, 0.4) 100%);
 }
 
 .about .particle {

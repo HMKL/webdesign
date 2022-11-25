@@ -49,7 +49,7 @@
 function value() {
   const navbar = document.querySelector('.top.bar');
   var scroll = window.scrollY;
-  if (scroll < 200) {
+  if (scroll < 50) {
       navbar.classList.remove('color');
       // navbar.classList.remove('fixed');
       // navbar.classList.add('absolute');
