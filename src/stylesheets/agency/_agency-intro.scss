@@ -2,7 +2,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
 .intro {
-  // background-color: #2f2755;
   background-color: #1f1f24;
   padding: 120px 0;
   background-image: url(../images/patrn.svg);
@@ -12,78 +11,21 @@
   position: relative;
   overflow: hidden;
 
-  // &::before {
-  //   content: "";
-  //   position: absolute;
-  //   width: 100%;
-  //   height: 100%;
-  //   bottom: 0px;
-  //   background: linear-gradient(
-  //     to left,
-  //     rgba(39, 70, 133, 0.4) 0%,
-  //     rgba(47, 39, 85, 0.4) 100%
-  //   );
-  // }
-
   .agency-intro {
     display: flex;
     flex-direction: column-reverse;
     justify-content: space-between;
+    align-items: center;
     // padding: 80px 0 0 0;
     @media (min-width: $md) {
       flex-direction: row;
     }
-    .agency-items.photo {
-      position: relative;
-      align-items: center;
-      padding: 0 0 20px 0;
-      @media (min-width: $lg) {
-        align-items: flex-end;
-        padding: 0;
-      }
-      img {
-        max-width: 30%;
-
-        @media (min-width: $md) {
-          max-width: 50%;
-        }
-      }
-      .blob {
-        background: black;
-        border-radius: 50%;
-        box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
-        margin: 10px;
-        height: 10px;
-        width: 10px;
-        transform: scale(1);
-        animation: pulse-black 2s infinite;
-        position: absolute;
-        // right: calc(15% + 46px);
-        @media (min-width: $lg) {
-          right: calc(15% + 46px);
-        }
-      }
-      .blob.white {
-        background: white;
-        box-shadow: 0 0 0 0 rgba(255, 255, 255, 1);
-        animation: pulse-white 2s infinite,
-          up-down 2s ease-in-out infinite alternate-reverse both;
-        // animation: up-down 2s ease-in-out infinite alternate-reverse both;
-      }
-    }
     .agency-items {
       width: 100%;
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
+
       @media (min-width: $lg) {
         width: 50%;
-        align-items: flex-start;
-        text-align: start;
       }
-
       h1 {
         margin: 0 0 10px 0;
         font-size: 28px;
@@ -101,7 +43,7 @@
         color: rgba(255, 255, 255, 0.6);
         margin-bottom: 30px;
         font-size: 18px;
-        line-height: 24px;
+        line-height: 1.4;
         font-family: "Jost", sans-serif;
         color: #a4a7b1;
         font-weight: 300;
@@ -153,34 +95,67 @@
           }
         }
       }
-      .animate {
-        animation: up-down 2s ease-in-out infinite alternate-reverse both;
-        @keyframes up-down {
-          0% {
-            transform: translateY(10px);
-          }
+      // .animate {
+      //   animation: up-down 2s ease-in-out infinite alternate-reverse both;
+      //   @keyframes up-down {
+      //     0% {
+      //       transform: translateY(10px);
+      //     }
 
-          100% {
-            transform: translateY(-10px);
-          }
-        }
-      }
-      @keyframes pulse-white {
-        0% {
-          transform: scale(0.95);
-          box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+      //     100% {
+      //       transform: translateY(-10px);
+      //     }
+      //   }
+      // }
+      &.photo {
+        position: relative;
+        margin: 0 auto;
+        width: 25%;
+        @media (min-width: $lg) {
+          padding: 0;
+          margin: 0 0 0 auto;
         }
 
-        70% {
+        .blob {
+          background: black;
+          border-radius: 50%;
+          box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
+          height: 10px;
+          width: 10px;
           transform: scale(1);
-          box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+          // animation: pulse-black 2s infinite;
+          position: absolute;
+          // right: calc(15% + 46px);
         }
+        .blob.white {
+          background: white;
+          box-shadow: 0 0 0 0 rgba(255, 255, 255, 1);
+          // animation: pulse-white 2s infinite,
+          //   up-down 2s ease-in-out infinite alternate-reverse both;
+          // animation: up-down 2s ease-in-out infinite alternate-reverse both;
+          top: 50%;
+          left: 50%;
 
-        100% {
-          transform: scale(0.95);
-          box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+          transform: translate(-50%, -50%);
         }
       }
     }
+  }
+}
+
+@keyframes pulse-white {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+  }
+
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+  }
+
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
   }
 }
